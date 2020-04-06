@@ -11,12 +11,17 @@ const cors = require("cors");
 app.use(bodyParser.json());
 app.use(
   bodyParser.urlencoded({
-    extended: true
+    extended: true,
   })
 );
 app.use(cors());
 
-// mongoose
-//   .connect(db, { useNewUrlParser: true, useCreateIndex: true })
-//   .then(() => console.log("Connection to Mongo DB established"))
-//   .catch(err => console.log(err));
+app.use("/cities", require("./routes/cities"));
+
+const db = require("./keys").mongoUrl;
+const mongoose = require("mongoose");
+
+mongoose
+  .connect(db, { useNewUrlParser: true, useCreateIndex: true })
+  .then(() => console.log("Connection to Mongo DB established"))
+  .catch((err) => console.log(err));
