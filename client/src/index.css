@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.landing {
+  height: 100vh;
+}
+
+#logo {
+  font-family: "Yellowtail", cursive;
+  font-size: 10vh;
+}
+
+.login-btn {
+  background-color: black;
+  color: white;
+  width: 25vw;
+  height: 8vh;
+  border: none;
+  cursor: pointer;
+  border-radius: 16px;
+  font-size: 1em;
+}
+
+.landing {
+  height: 100vh;
+  width: 100vw;
+}
+
+.landing-text {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 #ff6f5e;
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+
+/* package json: 
+"scripts": {
+  // "start": "react-scripts start",
+  "start": "nodemon server.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject" */
