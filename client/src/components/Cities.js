@@ -10,16 +10,16 @@ class Cities extends Component {
   //   };
   // }
 
-  componentDidMount() {
-    var requestOptions = {
-      method: "GET",
-      // redirect: 'follow'
-    };
+  // componentDidMount() {
+  //   var requestOptions = {
+  //     method: "GET",
+  //     // redirect: 'follow'
+  //   };
 
-    fetch("http://localhost:5000/cities/all", requestOptions)
-      .then((response) => response.text())
-      .then((result) => console.log(result))
-      .catch((error) => console.log("error", error));
+  //   fetch("http://localhost:5000/cities/all", requestOptions)
+  //     .then((response) => response.text())
+  //     .then((result) => console.log(result))
+  //     .catch((error) => console.log("error", error));
 
     return (
       <div>
