@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
+// import React, { Component } from "react";
 
-// export default function Cities() {
-
-class Cities extends Component {
+export default function Cities() {
+  // class Cities extends Component {
   // constructor() {
   //   super();
   //   this.state = {
@@ -21,15 +21,14 @@ class Cities extends Component {
   //     .then((result) => console.log(result))
   //     .catch((error) => console.log("error", error));
 
-    return (
-      <div>
-        <h1>Cities</h1>
-      </div>
-    );
-  }
+  return (
+    <div>
+      <h1>Cities</h1>
+    </div>
+  );
 }
 
-export default Cities;
+// export default Cities;
 
 // export default function Cities() {
 
