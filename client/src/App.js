@@ -4,6 +4,8 @@ import Landing from "./screen/Landing";
 import Cities from "./components/Cities";
 import SignUp from "./components/SignUp";
 import LogIn from "./components/LogIn";
+// import { Button } from "reactstrap";
+import "./App.css";
 // import Create from "./components/Create";
 // import Login from "./components/Login";
 // import AddCity from "./components/AddCity";
@@ -11,7 +13,6 @@ import LogIn from "./components/LogIn";
 // import Header from "./components/Header";
 // import Footer from "./components/Footer";
 
-import "./App.css";
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 // function App() {
