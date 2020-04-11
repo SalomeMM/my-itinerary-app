@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchCities } from "../store/actions/cityActions";
-// import { Card, CardGroup } from "reactstrap";
+import Header from "./Header";
+import { Form, FormGroup, Label, Input, FormText } from "reactstrap";
+import "../App.css";
+// import SearchBar from "./SearchBar";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 class Cities extends Component {
   constructor() {
@@ -46,32 +51,44 @@ class Cities extends Component {
     console.log("cities from cities", cities);
     return (
       <div>
+        <Header />
+        <div className="citySearchBar">
+          <span>
+            <FontAwesomeIcon icon={faSearch} className="faSearch" />
+          </span>
+          <span>
+            <input
+              id="search-bar"
+              // onKeyUp={event => this.props.search(event.target.value)}
+              type="textarea"
+              placeholder="Search city"
+              className="inputSearchBar"
+            ></input>
+          </span>
+        </div>
+
+        {/* <FormGroup> */}
+        {/* <Label for="exampleSearch"></Label> */}
+        {/* <FontAwesomeIcon icon={faSearch} className="faSearch" /> */}
+        {/* <Input
+            type="search"
+            name="search"
+            id="exampleSearch"
+            placeholder="Search city"
+            className="citySearchBar"
+          /> */}
+        {/* </FormGroup> */}
         {cities.map((city) => {
           // map one element (city), if we mapped more than one should be {this.state.cities.map((cities )=>
           // map to get the information we need of all cities, but one by one. That's why we put "city" in the brackets
           return (
-            <div key={city._id}>
+            <div key={city._id} className="cityDiv">
               <h1 className="cityName">{city.name}</h1>
               <p className="cityCountry">{city.country}</p>
               {/* <Link className="seeItineraries" to={"/itineraries/" + city.name}>
                 See itineraries
               </Link> */}
-              <img
-                src={city.img}
-                alt="pic"
-                style={{
-                  width: 350,
-                  height: 200,
-                  objectFit: "cover",
-                  overflow: "hidden",
-                  display: "block",
-                  // marginLeft: "auto",
-                  // marginRight: "auto",
-                  paddingBottom: 10,
-                  borderRadius: 50,
-                  margin: 20,
-                }}
-              />
+              <img src={city.img} alt="pic" className="cityImg" />
             </div>
           );
         })}

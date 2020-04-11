@@ -1,6 +1,7 @@
 import React from "react";
 // import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Header from "../components/Header";
 // import "bootstrap/dist/css/bootstrap.min.css";
 // import Arrow from ".../public/images/circled-right-2.png";
 // import Carousel from "Carousel";
@@ -16,7 +17,7 @@ export default function Landing() {
           Cities
         </Link>
       </nav> */}
-
+      <Header></Header>
       <div className="container-fluid App">
         <header className="col-12 ">
           {/* <img src={PhotoWithCamera} className="App-logo " alt="logo" /> */}
@@ -32,7 +33,6 @@ export default function Landing() {
             </div>
           </div>
           <Link to="/Cities">
-            {/* <img src={Arrow} alt="looking" className="circle" /> */}
             <img
               src="././images/circled-right-2.png"
               alt="Arrow"
@@ -41,7 +41,7 @@ export default function Landing() {
           </Link>
           <p className="mt-4 textSize col-sm-12 discoverText">
             Discover the best itineraries for your favorite activities in your
-            favorite city!
+            favorite cities!
           </p>
 
           <div className="container text-center homeButtons">
