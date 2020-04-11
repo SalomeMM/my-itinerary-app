@@ -5,9 +5,6 @@ import Cities from "./components/Cities";
 import SignUp from "./components/SignUp";
 import LogIn from "./components/LogIn";
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.css";
-import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default class App extends Component {
   render() {
