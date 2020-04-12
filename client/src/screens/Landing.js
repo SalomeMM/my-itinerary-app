@@ -9,19 +9,9 @@ import Header from "../components/Header";
 export default function Landing() {
   return (
     <div className="landing">
-      {/* <nav style={navStyle}>
-        <Link to="/" style={navLink}>
-          Home
-        </Link>
-        <Link to="./components/cities" style={navLink}>
-          Cities
-        </Link>
-      </nav> */}
       <Header></Header>
       <div className="container-fluid App">
-        <header className="col-12 ">
-          {/* <img src={PhotoWithCamera} className="App-logo " alt="logo" /> */}
-        </header>
+        <header className="col-12 "></header>
 
         <div>
           <div className="landingContent">
@@ -32,7 +22,7 @@ export default function Landing() {
               </h1>
             </div>
           </div>
-          <Link to="/Cities">
+          <Link to="./Cities">
             <img
               src="././images/circled-right-2.png"
               alt="Arrow"

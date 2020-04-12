@@ -1,11 +1,11 @@
 import React from "react";
 import Header from "../components/Header";
 
-export default function Favourites() {
+export default function Profile() {
   return (
     <div>
       <Header />
-      <h1>Favourites screen</h1>
+      <h1>Profile screen</h1>
     </div>
   );
 }

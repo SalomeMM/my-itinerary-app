@@ -55,16 +55,22 @@ body {
 .landingTitle {
   margin-top: 15%;
   margin-bottom: 15%;
+  padding: 5%;
+  background-color: black;
+  border-radius: 3%;
+
 }
 
 .landingTitle1 {
-  color: #f0134d;
+  /* color: #f0134d; */
+  color: #1da1f2;
   font-family: fantasy;
 }
 
 .landingTitle2 {
   /* color: #40bfc1; */
-  color: #655D73;
+  /* color: #655D73; */
+  color: white;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
@@ -93,7 +99,8 @@ body {
 }
 
 .signupButton {
-  background-color: #f0134d;
+  /* background-color: #f0134d; */
+  background-color: #1da1f2;
   font-weight: bolder;
   text-align: center;
   color: white;
@@ -105,7 +112,8 @@ body {
 }
 
 .loginButton {
-  background-color: #f0134d;
+  /* background-color: #f0134d; */
+  background-color: #1da1f2;
   font-weight: bolder;
   text-align: center;
   color: white;
@@ -122,7 +130,7 @@ body {
 @keyframes pulse {
   0% {
     transform: scale(0.95);
-    box-shadow: 0 0 0 0 #ff6f5e;
+    box-shadow: 0 0 0 0 #1da1f2;
   }
 
   70% {
@@ -152,6 +160,7 @@ body {
   justify-content: center;
   border-bottom-left-radius: 3%;
   border-bottom-right-radius: 3%;
+  margin-top: 8%;
   /* objectFit: "cover",
         overflow: "hidden",
         display: "block",
@@ -191,7 +200,22 @@ body {
   background-color: rgb(235, 235, 235);
 }
 
-.faSearch {
+.NavbarIcon {
   color: gray;
-  margin-right: 8px;
+  margin: 8px;
+}
+
+.seeItineraryDiv {
+  margin: 3%;
+}
+
+.seeItineraries {
+  color: white;
+  font-weight: bolder;
+  background-color: #1da1f2;
+  padding: 5px;
+  border-radius: 4%;
+  border: 3px;
+  margin: 3px;
+  /* margin-bottom: 20px; */
 }

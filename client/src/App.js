@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Landing from "./screens/Landing";
-import Cities from "./components/Cities";
-import SignUp from "./components/SignUp";
-import LogIn from "./components/LogIn";
+import Cities from "./screens/Cities";
+import SignUp from "./screens/SignUp";
+import LogIn from "./screens/LogIn";
+import Profile from "./screens/Profile";
 import "./App.css";
 
 export default class App extends Component {
@@ -16,6 +17,7 @@ export default class App extends Component {
             <Route path="/cities" component={Cities} />
             <Route path="/signup" component={SignUp} />
             <Route path="/login" component={LogIn} />
+            <Route path="/profile" component={Profile} />
             {/* <Route path="/Create" component={Create} />
             <Route path="/AddCity" component={AddCity} />
             <Route component={Notfound} /> */}

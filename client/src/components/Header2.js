@@ -2,26 +2,24 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
   Collapse,
   Navbar,
-  // NavbarToggler,
+  NavbarToggler,
   NavbarBrand,
   Nav,
   NavItem,
   NavLink,
-  // UncontrolledDropdown,
-  // DropdownToggle,
-  // DropdownMenu,
-  // DropdownItem,
-  // Button,
-  // Form,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  Button,
+  Form,
 } from "reactstrap";
-// import FormControl from "react-bootstrap/FormControl";
+import FormControl from "react-bootstrap/FormControl";
 export default class Header extends Component {
   constructor(props) {
     super();
@@ -42,34 +40,38 @@ export default class Header extends Component {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="./Profile">
-            <FontAwesomeIcon
-              icon={faUserCircle}
-              className="faUserCircle NavbarIcon"
-            />
-          </NavbarBrand>
           <NavbarBrand href="/">
-            <FontAwesomeIcon icon={faHome} className="faHome NavbarIcon" />
+            <FontAwesomeIcon icon={faUserCircle} className="faUserCircle" />
           </NavbarBrand>
-          <FontAwesomeIcon
-            icon={faBars}
-            className="faBars NavbarIcon"
+          <NavbarToggler
             onClick={() => this.setState({ isOpen: !this.state.isOpen })}
           />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="mr-auto" navbar>
-              <NavItem>
-                {/* <NavLink>
-                  {" "} */}
-                <Link to="./">Home </Link>
+              <NavItem componentClass="span">
+                {/* <NavLink> */} <Link to="./">Home </Link>
                 {/* </NavLink> */}
               </NavItem>
-              <NavItem>
-                {/* <NavLink>
-                  {" "} */}
-                <Link to="./Cities">Cities </Link>
+              <NavItem componentClass="span">
+                {/* <NavLink> */} <Link to="..screens/Cities">Cities </Link>
                 {/* </NavLink> */}
               </NavItem>
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  Others
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem>
+                    {" "}
+                    <Link to="../screens/Favourites">Favourites </Link>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <Link to="/">Profile </Link>
+                  </DropdownItem>
+                  {/* <DropdownItem divider /> */}
+                  {/* <DropdownItem>Reset</DropdownItem> */}
+                </DropdownMenu>
+              </UncontrolledDropdown>
             </Nav>
           </Collapse>
         </Navbar>
