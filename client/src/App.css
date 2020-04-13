@@ -1,77 +1,43 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto|Press+Start+2P&display=swap");
 
-.fa-user-circle {
-  color: grey;
-  font-size: 25px;
+html,
+body {
+  height: 100vh;
+  width: 100vw;
 }
 
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  border-width: 0px;
+  /* border-style: outset; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-html,
-body {
-  height: 100vh;
-  width: 100vw;
-  /* background-color: #f5f0e3; */
-}
+/* Landing */
 
 .landingTitle {
   margin-top: 15%;
   margin-bottom: 15%;
   padding: 5%;
-  background-color: black;
+  /* background-color: black; */
   border-radius: 3%;
-
 }
 
 .landingTitle1 {
   /* color: #f0134d; */
   color: #1da1f2;
   font-family: fantasy;
+  font-size: 120%;
 }
 
 .landingTitle2 {
   /* color: #40bfc1; */
   /* color: #655D73; */
-  color: white;
+  color: black;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: bolder;
 }
 
 #arrow {
@@ -98,7 +64,7 @@ body {
   margin-bottom: 15%;
 }
 
-.signupButton {
+.blueButton {
   /* background-color: #f0134d; */
   background-color: #1da1f2;
   font-weight: bolder;
@@ -110,22 +76,6 @@ body {
   padding-right: 20px;
   margin: 3px;
 }
-
-.loginButton {
-  /* background-color: #f0134d; */
-  background-color: #1da1f2;
-  font-weight: bolder;
-  text-align: center;
-  color: white;
-  padding-top: 8px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 3px;
-}
-
-/* using: https: //colorhunt.co/palette/168306 */
-/* https: //colorhunt.co/palette/167363 */
 
 @keyframes pulse {
   0% {
@@ -133,7 +83,7 @@ body {
     box-shadow: 0 0 0 0 #1da1f2;
   }
 
-  70% {
+  90% {
     transform: scale(1);
     box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
   }
@@ -144,10 +94,25 @@ body {
   }
 }
 
+/* Header */
+
+.fa-user-circle {
+  color: grey;
+  font-size: 25px;
+}
+
+/* END Header */
+
+/* Cities */
+
+/* END Cities */
+
 .cityDiv {
   width: 80vw;
   justify-content: center;
-  margin: 10%;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-bottom: 10%;
   /* background-color: lightgray; */
   border-width: 1px;
   border-color: lightgray;
@@ -161,14 +126,6 @@ body {
   border-bottom-left-radius: 3%;
   border-bottom-right-radius: 3%;
   margin-top: 8%;
-  /* objectFit: "cover",
-        overflow: "hidden",
-        display: "block",
-        // marginLeft: "auto",
-        // marginRight: "auto",
-        paddingBottom: 10,
-        borderRadius: 50,
-        margin: 20, */
 }
 
 .citySearchBar {
@@ -219,3 +176,70 @@ body {
   margin: 3px;
   /* margin-bottom: 20px; */
 }
+
+li {
+  list-style-type: none;
+}
+
+.addCityDiv {
+  margin: 5%;
+  position: sticky;
+  background-position: right;
+  background-position: bottom;
+  object-position: right;
+  top: 0;
+}
+
+.addCity {
+  color: white;
+  font-weight: bolder;
+  background-color: #1da1f2;
+  padding: 5px;
+  border-radius: 4%;
+  border: 3px;
+  margin: 3px;
+  position: sticky;
+  background-position: right;
+  background-position: bottom;
+  object-position: right;
+  top: 0;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+}
+
+.landing {
+  background-image: url(https://desenio.de/bilder/artiklar/zoom/8450_1.jpg);
+  background-position-x: -250px;
+  background-size: inherit;
+}
+
+
+
+
+/* REACT */
+/* 
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+} */
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+
+/* .App-link {
+  color: #61dafb;
+} */
+
+/* @keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+} */

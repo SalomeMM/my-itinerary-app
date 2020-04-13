@@ -6,10 +6,10 @@ import Header from "../components/Header";
 // import { Form, FormGroup, Label, Input, FormText } from "reactstrap";
 import "../App.css";
 // import SearchBar from "./SearchBar";
+import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import SearchBar from "../components/SearchBar";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class CitiesScreen extends Component {
   constructor(props) {
@@ -53,7 +53,7 @@ class CitiesScreen extends Component {
   render() {
     // const filterList = this.filter();
     const { cities } = this.props;
-    const { cityDisplay } = this.props;
+    // const { cityDisplay } = this.props;
     // console.log("this.props", this.props.cities);
     // console.log("cities", cities);
     // beg pre
@@ -71,7 +71,12 @@ class CitiesScreen extends Component {
       <div>
         <Header />
         <SearchBar search={this.searchBar} />
-
+        <div className="addCityDiv">
+          <Link className="addCity" to={"/add-city/"}>
+            <FontAwesomeIcon icon={faPlusCircle} className="faPlusCircle" />
+            <span> Add city </span>
+          </Link>
+        </div>
         {/* <div className="citySearchBar">
           <span>
             <FontAwesomeIcon icon={faSearch} className="faSearch" />
@@ -98,7 +103,6 @@ class CitiesScreen extends Component {
             ></input>
           </span>
         </div> */}
-
         <City cityDisplay={cities} />
       </div>
     );

@@ -33,19 +33,15 @@ export default function Landing() {
             Discover the best itineraries for your favorite activities in your
             favorite cities!
           </p>
-
           <div className="container text-center homeButtons">
-            <Link to="/SignUp" className="signupButton">
+            <Link to="/SignUp" className="blueButton">
               Sign Up
             </Link>
-            <Link to="/logIn" className="loginButton">
+            <Link to="/logIn" className="blueButton">
               Log In
             </Link>
           </div>
-
-          {/* {cities && <Carousel cities={cities} />} */}
         </div>
-        {/* <AddCity cities={cities} /> */}
       </div>
     </div>
   );

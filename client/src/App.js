@@ -5,6 +5,8 @@ import Cities from "./screens/Cities";
 import SignUp from "./screens/SignUp";
 import LogIn from "./screens/LogIn";
 import Profile from "./screens/Profile";
+import Favourites from "./screens/Favourites";
+import AddCity from "./screens/AddCity";
 import "./App.css";
 
 export default class App extends Component {
@@ -18,6 +20,8 @@ export default class App extends Component {
             <Route path="/signup" component={SignUp} />
             <Route path="/login" component={LogIn} />
             <Route path="/profile" component={Profile} />
+            <Route path="/favourites" component={Favourites} />
+            <Route path="/add-city" component={AddCity} />
             {/* <Route path="/Create" component={Create} />
             <Route path="/AddCity" component={AddCity} />
             <Route component={Notfound} /> */}

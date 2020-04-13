@@ -5,25 +5,17 @@ import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import {
-  Collapse,
   Navbar,
-  // NavbarToggler,
   NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  // UncontrolledDropdown,
-  // DropdownToggle,
-  // DropdownMenu,
-  // DropdownItem,
-  // Button,
-  // Form,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
 } from "reactstrap";
-// import FormControl from "react-bootstrap/FormControl";
+
 export default class Header extends Component {
-  constructor(props) {
+  constructor() {
     super();
     this.state = {
       isOpen: false,
@@ -31,47 +23,60 @@ export default class Header extends Component {
     };
   }
 
-  handleChangeChild = (e) => {
-    console.log("e from header", e);
-    //console.log("this.props", this.props);
-    this.props.callbackFromParent(e);
-  };
-
   render() {
     //toggle = () => this.setState({ isOpen: !isOpen });
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="./Profile">
+          {/* Icon 1/3: User = dropdown to Profile, LogOut)*/}
+          {/* <NavbarBrand href="./Profile">
             <FontAwesomeIcon
               icon={faUserCircle}
               className="faUserCircle NavbarIcon"
-            />
-          </NavbarBrand>
+            /> */}
+          {/* </NavbarBrand> */}
+          <UncontrolledDropdown nav inNavbar>
+            <DropdownToggle nav>
+              <FontAwesomeIcon
+                icon={faUserCircle}
+                className="faUserCircle NavbarIcon"
+              />
+            </DropdownToggle>
+            <DropdownMenu>
+              <DropdownItem>
+                {" "}
+                <Link to="./Profile">My profile </Link>
+              </DropdownItem>
+              <DropdownItem>
+                <Link to="/">Log out </Link>
+              </DropdownItem>
+              {/* <DropdownItem divider /> */}
+              {/* <DropdownItem>Reset</DropdownItem> */}
+            </DropdownMenu>
+          </UncontrolledDropdown>
+          {/* Icon 2/3: Home */}
           <NavbarBrand href="/">
             <FontAwesomeIcon icon={faHome} className="faHome NavbarIcon" />
           </NavbarBrand>
-          <FontAwesomeIcon
-            icon={faBars}
-            className="faBars NavbarIcon"
-            onClick={() => this.setState({ isOpen: !this.state.isOpen })}
-          />
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="mr-auto" navbar>
-              <NavItem>
-                {/* <NavLink>
-                  {" "} */}
-                <Link to="./">Home </Link>
-                {/* </NavLink> */}
-              </NavItem>
-              <NavItem>
-                {/* <NavLink>
-                  {" "} */}
+          {/* Icon 3/3: Bars = dropdown to Cities, Favourites) */}
+          <UncontrolledDropdown nav inNavbar>
+            <DropdownToggle nav>
+              <FontAwesomeIcon
+                icon={faBars}
+                className="faBars NavbarIcon"
+                onClick={() => this.setState({ isOpen: !this.state.isOpen })}
+              />
+            </DropdownToggle>
+            <DropdownMenu right>
+              <DropdownItem>
+                {" "}
                 <Link to="./Cities">Cities </Link>
-                {/* </NavLink> */}
-              </NavItem>
-            </Nav>
-          </Collapse>
+              </DropdownItem>
+              <DropdownItem>
+                <Link to="./Favourites">Favourites </Link>
+              </DropdownItem>
+            </DropdownMenu>
+          </UncontrolledDropdown>
         </Navbar>
       </div>
     );
