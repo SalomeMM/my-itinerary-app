@@ -27,6 +27,17 @@ router.get("/:name", (req, res) => {
     .catch((err) => console.log(err));
 });
 
+//this is how you implement a city route by specific city
+router.get("/:name", (req, res) => {
+  let cityRequested = req.params.name;
+  cityModel
+    .findOne({ name: cityRequested })
+    .then((city) => {
+      res.send(city);
+    })
+    .catch((err) => console.log(err));
+});
+
 // post request to add a new city
 router.post(
   "/",
