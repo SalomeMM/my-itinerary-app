@@ -24,19 +24,6 @@ class CitiesScreen extends Component {
     this.props.fetchCities(); // takes cities from db
   }
 
-  // filter() {
-  //   if (this.props.cities) {
-  //     const filterCity = this.props.cities.filter((city, index) => {
-  //       // console.log(" our cities  " + city.name);
-  //       console.log("our search " + this.state.searchInput);
-  //       let cityName = city.name.toLowerCase();
-  //       return cityName.startsWith(this.state.searchInput.toLowerCase());
-  //     });
-  //     console.log(filterCity);
-  //     return filterCity;
-  //   } else return [];
-  // }
-
   searchBar = (term) => {
     for (let i = 0; i < this.state.cities.length; i++) {
       let name = this.state.cities[i].name;
@@ -56,16 +43,6 @@ class CitiesScreen extends Component {
     // const { cityDisplay } = this.props;
     // console.log("this.props", this.props.cities);
     // console.log("cities", cities);
-    // beg pre
-    // const { cities } = this.props.cities;
-    // let cityFilter = this.state.input;
-    // console.log(this.props.cities);
-    // let filteredCities = cities.filter((city) => {
-    //   let cityName = city.name.toLowerCase();
-    //   return cityName.indexOf(cityFilter.toLowerCase()) !== -1;
-    // });
-    // console.log(filteredCities);
-    // end pre
 
     return (
       <div>
@@ -77,32 +54,6 @@ class CitiesScreen extends Component {
             <span> Add city </span>
           </Link>
         </div>
-        {/* <div className="citySearchBar">
-          <span>
-            <FontAwesomeIcon icon={faSearch} className="faSearch" />
-          </span>
-          <span>
-            <input
-              id="search-bar"
-              // onKeyUp={event => this.props.search(event.target.value)}
-              type="text"
-              // type="textarea"
-              placeholder="Search city"
-              className="inputSearchBar"
-              // value={this.state.input}
-              // onChange={(event) => {
-              //   this.setState({ input: event.target.value });
-              // }}
-
-              //beg alba2
-              value={this.state.searchInput}
-              onChange={(event) => {
-                this.setState({ input: event.target.value });
-              }}
-              //end alba2
-            ></input>
-          </span>
-        </div> */}
         <City cityDisplay={cities} />
       </div>
     );
