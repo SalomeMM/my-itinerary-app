@@ -14,16 +14,11 @@ export default class SearchBar extends Component {
         <span>
           <input
             id="search-bar"
-            onKeyUp={(event) => this.props.search(event.target.value)}
+            // onKeyUp={(event) => this.props.searchInput(event.target.value)}
             type="textarea"
-            // type="textarea"
-            placeholder="Search city"
+            placeholder="Search city (SearchBar.js)"
             className="inputSearchBar"
-            // onKeyUp={(event) => this.props.search(event.target.value)}
-            // value={this.state.input}
-            // onChange={(event) => {
-            //   this.setState({ input: event.target.value });
-            // }}
+            // onChange={(event) => this.handleSearch(event.target.value)}
           ></input>
         </span>
       </div>

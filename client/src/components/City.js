@@ -9,7 +9,7 @@ export default class City extends Component {
   //   };
 
   render() {
-    console.log("city props", this.props);
+    // console.log("city props", this.props);
     const { cityDisplay } = this.props;
     return (
       <div>
@@ -21,9 +21,15 @@ export default class City extends Component {
               <h1 className="cityName">{city.name}</h1>
               <p className="cityCountry">{city.country}</p>
               <div className="seeItineraryDiv">
-                <Link
+                {/* <Link
                   className="seeItineraries"
                   to={"/Itineraries/" + city.name}
+                >
+                  See itineraries
+                </Link> */}
+                <Link
+                  className="seeItineraries"
+                  to={`/itineraries/${city.name}`}
                 >
                   See itineraries
                 </Link>

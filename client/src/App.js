@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Landing from "./screens/Landing";
 import Cities from "./screens/Cities";
+import Itineraries from "./screens/Itineraries";
 import SignUp from "./screens/SignUp";
 import LogIn from "./screens/LogIn";
 import Profile from "./screens/Profile";
@@ -17,6 +18,7 @@ export default class App extends Component {
           <Switch>
             <Route exact path="/" component={Landing} />
             <Route path="/cities" component={Cities} />
+            <Route path="/itineraries/:city" component={Itineraries} />
             <Route path="/signup" component={SignUp} />
             <Route path="/login" component={LogIn} />
             <Route path="/profile" component={Profile} />

@@ -15,9 +15,9 @@ export const fetchItineraries = () => {
   };
 };
 
-export const fetchItinerariesByCityName = (city) => {
+export const fetchItinerariesByCityName = (name) => {
   return (dispatch) => {
-    fetch("http://localhost:5000/api/itineraries/" + city)
+    fetch("http://localhost:5000/api/itineraries/" + name)
       .then((resp) => {
         return resp.json();
       })
