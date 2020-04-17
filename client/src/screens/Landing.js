@@ -22,7 +22,7 @@ export default function Landing() {
               </h1>
             </div>
           </div>
-          <Link to="./Cities">
+          <Link to="./cities">
             <img
               src="././images/circled-right-2.png"
               alt="Arrow"

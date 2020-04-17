@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,11 +13,10 @@ export default class SearchBar extends Component {
         <span>
           <input
             id="search-bar"
-            // onKeyUp={(event) => this.props.searchInput(event.target.value)}
             type="textarea"
             placeholder="Search city (SearchBar.js)"
             className="inputSearchBar"
-            // onChange={(event) => this.handleSearch(event.target.value)}
+            onKeyUp={(event) => this.props.search(event.target.value)}
           ></input>
         </span>
       </div>

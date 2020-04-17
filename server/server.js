@@ -17,6 +17,13 @@ app.use(
 app.use(cors());
 
 app.use("/cities", require("./routes/cities"));
+app.use("/itineraries", require("./routes/itineraries"));
+// app.use("/users", require("./routes/users"));
+
+// // Passport middleware
+// app.use(passport.initialize());
+// // // Passport config
+// require("./passport")(passport);
 
 const db = require("./keys").mongoUrl;
 const mongoose = require("mongoose");

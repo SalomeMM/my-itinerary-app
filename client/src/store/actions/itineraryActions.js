@@ -15,13 +15,14 @@ export const fetchItineraries = () => {
   };
 };
 
-export const fetchItinerariesByCityName = (name) => {
+export const fetchItinerariesByCity = (name) => {
   return (dispatch) => {
-    fetch("http://localhost:5000/api/itineraries/" + name)
+    fetch("http://localhost:5000/itineraries/" + name)
       .then((resp) => {
         return resp.json();
       })
       .then((json) => {
+        console.log(json);
         dispatch({ type: "FETCH_ITINERARIES_SUCCESS", payload: json });
       })
       .catch((err) => {

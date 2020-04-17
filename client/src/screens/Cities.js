@@ -8,7 +8,6 @@ import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SearchBar from "../components/SearchBar";
 import { Link } from "react-router-dom";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 class CitiesScreen extends Component {
   constructor(props) {
@@ -23,7 +22,7 @@ class CitiesScreen extends Component {
     this.props.fetchCities(); // takes cities from db
   }
 
-  /*search bar function to return filtered list of cities that include query in city name or country name*/
+  /*get filtered cities by city name and country name*/
   searchBar = () => {
     let search = this.props.cities.filter((cities) => {
       return (
@@ -43,12 +42,11 @@ class CitiesScreen extends Component {
     const { cities } = this.props;
     const filteredCities = this.searchBar();
     console.log("filtered cities:", filteredCities);
-
     return (
       <div>
         <Header />
-        {/* <SearchBar search={this.searchBar} /> */}
-        <div className="citySearchBar">
+        <SearchBar search={this.handleSearch} />
+        {/* <div className="citySearchBar">
           <span>
             <FontAwesomeIcon icon={faSearch} className="faSearch" />
           </span>
@@ -62,7 +60,7 @@ class CitiesScreen extends Component {
               onKeyUp={(event) => this.handleSearch(event.target.value)}
             ></input>
           </span>
-        </div>
+        </div> */}
         <div className="addCityDiv">
           <Link className="addCity" to={"/add-city/"}>
             <FontAwesomeIcon icon={faPlusCircle} className="faPlusCircle" />
@@ -70,8 +68,8 @@ class CitiesScreen extends Component {
           </Link>
         </div>
         {cities &&
-          filteredCities.map(() => {
-            return <City cityDisplay={filteredCities} />;
+          filteredCities.map((city) => {
+            return <City city={city} key={city._id} />;
           })}
         {/* <City cityDisplay={cities} /> */}
       </div>

@@ -70,10 +70,10 @@ export default class Header extends Component {
             <DropdownMenu right>
               <DropdownItem>
                 {" "}
-                <Link to="./Cities">Cities </Link>
+                <Link to="./cities">Cities </Link>
               </DropdownItem>
               <DropdownItem>
-                <Link to="./Favourites">Favourites </Link>
+                <Link to="./favourites">Favourites </Link>
               </DropdownItem>
             </DropdownMenu>
           </UncontrolledDropdown>
