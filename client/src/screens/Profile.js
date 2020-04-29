@@ -9,3 +9,5 @@ export default function Profile() {
     </div>
   );
 }
+
+//mapstatetoprops to add user reducer.

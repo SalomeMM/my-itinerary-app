@@ -6,6 +6,11 @@ body {
   width: 100vw;
 }
 
+#root {
+  height: 100%;
+  width: 100%;
+}
+
 .App {
   text-align: center;
 }
@@ -210,8 +215,9 @@ li {
 
 .landing {
   background-image: url(https://desenio.de/bilder/artiklar/zoom/8450_1.jpg);
-  background-position-x: -250px;
+  background-position-x: -220px;
   background-size: inherit;
+  height: 100vh;
 }
 
 
