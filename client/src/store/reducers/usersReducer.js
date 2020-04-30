@@ -6,7 +6,6 @@ const initialState = {
 };
 
 function usersReducer(state = initialState, action) {
-  // console.log("user action", action);
   switch (action.type) {
     case "SIGNUP_SUCCESS":
       console.log("SIGNUP_SUCCESS", action);
@@ -14,6 +13,19 @@ function usersReducer(state = initialState, action) {
     case "SIGNUP_ERROR":
       console.log("SIGNUP_ERROR", action);
       return { ...state, err: action.payload.data };
+    case "LOGIN_SUCCESS":
+      return {
+        ...state,
+        token: action.token,
+        user: action.payload,
+        isLoggedIn: true,
+      };
+    case "LOGOUT SUCCESS":
+      return {
+        ...state,
+        isLoggedIn: false,
+        token: null,
+      };
     default:
       return state;
   }

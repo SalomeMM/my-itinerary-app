@@ -115,6 +115,9 @@ class SignUp extends Component {
                 Create Account
               </button>
             </div>
+            <div>
+              <button className="redButton">Sign up with Google</button>
+            </div>
           </form>
         </div>
       </div>

@@ -13,6 +13,10 @@ const userSchema = new mongoose.Schema({
   },
   password: {
     type: String,
+    required: false,
+  },
+  auth: {
+    type: Boolean,
     required: true,
   },
   picture: {

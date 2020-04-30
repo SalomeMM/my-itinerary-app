@@ -16,6 +16,10 @@ app.use(
 );
 app.use(cors());
 
+const passport = require("passport");
+app.use(passport.initialize()); // Passport middleware
+require("./passport")(passport); // Passport configuration
+
 app.use("/cities", require("./routes/cities"));
 app.use("/itineraries", require("./routes/itineraries"));
 app.use("/users", require("./routes/users"));

@@ -30,9 +30,9 @@ router.post("/logIn", (req, res) => {
       jwt.sign(payload, key.secretOrKey, options, (err, token) => {
         if (err) {
           res.json({
-            // response that we sent back to the front end
+            // response to the front end
             success: false,
-            token: "There was an error", // send an error if there is
+            token: "There was an error",
           });
         } else {
           res.json({
