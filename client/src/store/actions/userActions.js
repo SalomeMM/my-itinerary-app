@@ -86,3 +86,12 @@ export const loginGoogle = (token) => {
     });
   };
 };
+
+export const logOut = () => {
+  return (dispatch) => {
+    axios.get("http://localhost:3000/");
+    localStorage.removeItem("token");
+    // localStorage.clear();
+    dispatch({ type: "LOGOUT SUCCESS" });
+  };
+};

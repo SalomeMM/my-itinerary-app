@@ -22,5 +22,11 @@ const userSchema = new mongoose.Schema({
   picture: {
     type: String,
   },
+  // favourites: {
+  //   type: [String],
+  // },
+  // comments: {
+  //   type: [Object],
+  // },
 });
 module.exports = mongoose.model("user", userSchema);

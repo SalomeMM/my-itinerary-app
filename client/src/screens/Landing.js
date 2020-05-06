@@ -44,10 +44,10 @@ class Landing extends Component {
               favorite cities!
             </p>
             <div className="container text-center homeButtons">
-              <Link to="/SignUp" className="blueButton">
+              <Link to="/signup" className="blueButton">
                 Sign Up
               </Link>
-              <Link to="/logIn" className="blueButton">
+              <Link to="/login" className="blueButton">
                 Log In
               </Link>
             </div>

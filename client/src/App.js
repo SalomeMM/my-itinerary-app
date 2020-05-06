@@ -5,6 +5,7 @@ import cities from "./screens/Cities";
 import itineraries from "./screens/Itineraries";
 import signup from "./screens/SignUp";
 import login from "./screens/LogIn";
+import logout from "./screens/LogOut";
 import profile from "./screens/Profile";
 import favourites from "./screens/Favourites";
 import addcity from "./screens/AddCity";
@@ -16,11 +17,12 @@ export default class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Switch>
-            <Route exact path="/" component={home} />
+            <Route exact path="/home" component={home} />
             <Route path="/cities" component={cities} />
             <Route path="/itineraries/:city" component={itineraries} />
             <Route path="/signup" component={signup} />
             <Route path="/login" component={login} />
+            <Route path="/logout" component={logout} />
             <Route path="/profile" component={profile} />
             <Route path="/favourites" component={favourites} />
             <Route path="/add-city" component={addcity} />

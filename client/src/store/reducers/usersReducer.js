@@ -2,6 +2,7 @@ const initialState = {
   user: null,
   picture: "",
   err: "",
+  token: "",
   isLoggedIn: false,
 };
 
@@ -25,6 +26,7 @@ function usersReducer(state = initialState, action) {
         ...state,
         isLoggedIn: false,
         token: null,
+        user: null,
       };
     default:
       return state;

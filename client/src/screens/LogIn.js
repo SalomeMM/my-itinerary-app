@@ -17,6 +17,7 @@ class LogIn extends Component {
       [e.target.id]: e.target.value,
     });
   };
+
   handleSubmit = (e) => {
     e.preventDefault();
     if (this.state.email === "" || this.state.password === "") {
@@ -78,7 +79,6 @@ class LogIn extends Component {
                     onChange={this.handleChange}
                   />
                 </div>
-
                 <div className="formInput">
                   <button onClick={this.handleSubmit} className="blueButton">
                     Log In

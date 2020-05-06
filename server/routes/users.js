@@ -20,6 +20,8 @@ router.get(
   }
 );
 
+// User registration / sign up
+
 router.post("/register", async (req, res) => {
   console.log(req.body);
 
@@ -72,6 +74,8 @@ router.post("/register", async (req, res) => {
     });
   }
 });
+
+// Common log in
 
 router.post("/login", async (req, res) => {
   const email = req.body.email;
@@ -151,6 +155,8 @@ router.get(
   }
 );
 
+// Google log in
+
 router.get(
   "/auth/google",
   passport.authenticate("google", { scope: ["email", "profile"] })
@@ -194,6 +200,20 @@ router.get("/test", (req, res) => {
 
 module.exports = router;
 
+//Log out
+
+router.get(
+  "/logout",
+  passport.authenticate("jwt", { session: false }),
+  (req, res) => {
+    userModel.findOne({ _id: req.user.id }).then((user) => {
+      user.loggedIn = false;
+      user.save();
+      res.json("logged out");
+    });
+  }
+);
+
 //logout route calling passport functions
 
 // router.get(
@@ -206,3 +226,10 @@ module.exports = router;
 //       res.json("logged out");
 //     });
 //   }
+
+// router.get("/logout", (req, res) => {
+//   userModel.findOne(req.body.email).then((user) => {
+//     console.log("user", user);
+//     props.history.push("/login");
+//   });
+// });
