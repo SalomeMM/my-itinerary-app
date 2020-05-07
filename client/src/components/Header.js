@@ -82,7 +82,7 @@ class Header extends Component {
             </DropdownMenu>
           </UncontrolledDropdown>
           {/* Icon 2/3: Home */}
-          <NavbarBrand href="/home">
+          <NavbarBrand href="/">
             <FontAwesomeIcon icon={faHome} className="faHome NavbarIcon" />
           </NavbarBrand>
           {/* Icon 3/3: Bars = dropdown to Cities, Favourites) */}
