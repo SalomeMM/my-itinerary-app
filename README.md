@@ -1,6 +1,6 @@
 # My Itinerary App
 
-Web Progressive App showing itineraries with different activities for different cities.
+Web Progressive App showing itineraries with different activities for different cities.  
 Features: Create an account, email log in, Google account log in, log out.
 
 Applied:
