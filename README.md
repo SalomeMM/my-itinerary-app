@@ -5,12 +5,12 @@ Features: Create an account, email log in, Google account log in, log out.
 
 Applied:
 
-- React.js - Frontend
-- Node.js - Backend
-- MongoDB - Database
-- Mongoose - Object modeling tool
-- Express.js - RESTful Services Framework
-- Redux - UI Datastore
+- React.js
+- Node.js
+- MongoDB
+- Mongoos
+- Express.js
+- Redux
 - HTML
 - CSS
 - Bootstrap
